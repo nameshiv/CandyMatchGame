@@ -1,0 +1,176 @@
+body {
+    background: url("./background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Game board styling */
+#board {
+    width: 90vw;
+    /* Make board responsive based on viewport width */
+    max-width: 450px;
+    /* Maximum size for larger screens */
+    height: 90vw;
+    /* Keep height and width equal for a square board */
+    max-height: 450px;
+    background-color: lightblue;
+    border: 5px solid slategray;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive candy tiles */
+#board img {
+    width: calc(100% / 9);
+    /* Dynamically adjust size based on grid (9x9 grid) */
+    height: calc(100% / 9);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+}
+
+/* Animation for when candies are crushed */
+.fade-out {
+    animation: fadeOutShrink 0.5s ease forwards;
+}
+
+@keyframes fadeOutShrink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+        /* Shrink the candy */
+    }
+}
+
+/* Bounce effect for new candies sliding in */
+@keyframes slideDownBounce {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    70% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.new-candy {
+    animation: slideDownBounce 0.7s ease-out;
+}
+
+/* Hover effect to make candies pop a little */
+#board img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Ensure text is responsive */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Score styling */
+#score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #score {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #score {
+        font-size: 1.2em;
+    }
+}
+
+/* Style for the play/pause button */
+#playPauseBtn {
+    /* background-color: #4CAF50; Green background */
+    border: none;
+    /* No border */
+    border-radius: 30px;
+    /*Rounded corners*/
+    padding: 0px 0px;
+    /*Some padding*/
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    display: flex;
+    /* Flexbox for centering */
+    align-items: center;
+    /* Center icon vertically */
+    justify-content: center;
+    /* Center icon horizontally */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Change background on hover */
+#playPauseBtn:hover {
+    background-color: #059b98;
+    /* Darker green on hover */
+}
+
+/* Style for the image icon */
+#playPauseIcon {
+    width: 34px;
+    /* Consistent icon size */
+    height: 34px;
+    /* Consistent icon size */
+
+}
+
+footer {
+    position: fixed;
+    /* Fixes the footer at the bottom */
+    bottom: 0px;
+    /* Adjusts distance from the bottom */
+    right: 2px;
+    /* Adjusts distance from the right */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    color: white;
+    /* Text color */
+    padding: 0px 5px;
+    /* Padding for better spacing */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 12px;
+    /* Font size */
+    font-style: italic;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Shadow effect */
+    z-index: 10;
+    /* Ensures it appears above other elements */
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Match Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- <button id="playPauseBtn"><img src="icons8-audio-50.png" alt="">Play/Pause</button> -->
+    <button id="playPauseBtn">
+        <img id="playPauseIcon" src="soundon.png" alt="Play">
+    </button>
+
+
+    <script>
+        // var audio = new Audio('bgm2.mp3');
+        // audio.loop = true; // Set to loop
+
+        // document.getElementById('playPauseBtn').addEventListener('click', function() {
+        //     if (audio.paused) {
+        //         audio.play();
+        //         this.textContent = 'Pause'; // Change button text to 'Pause'
+        //     } else {
+        //         audio.pause();
+        //         this.textContent = 'Play'; // Change button text to 'Play'
+        //     }
+        // }); 
+        var audio = new Audio('bgm2.mp3');
+        audio.loop = true; // Set to loop
+
+        document.getElementById('playPauseBtn').addEventListener('click', function () {
+            var icon = document.getElementById('playPauseIcon');
+
+            if (audio.paused) {
+                audio.play();
+                icon.src = 'soundon.png'; // Change icon to pause
+                icon.alt = 'Pause'; // Change alt text
+            } else {
+                audio.pause();
+                icon.src = 'mute.png'; // Change icon to play
+                icon.alt = 'Play'; // Change alt text
+            }
+        });
+
+    </script>
+</head>
+
+
+<body>
+
+    <h1>Score: <span id="score">0</span></h1>
+
+    <div id="board">
+
+
+    </div>
+
+    <footer>
+        <p>&copy Shivam Sinha</p>
+    </footer>
+
+</body>
+
+</html>
