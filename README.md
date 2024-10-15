@@ -1,5 +1,3 @@
-![Screenshot (2)](https://github.com/user-attachments/assets/d60b2e20-504a-4839-94d1-9af87661adf2)
-![Screenshot (4)](https://github.com/user-attachments/assets/6bb5029e-c5d7-4d3c-a913-f7197998b4a6)
 # CandyMatchGame
 "A Candy Crush-style" game built with HTML, CSS, and JavaScript.
 
@@ -19,3 +17,7 @@ Integrated audio features for enhanced gameplay immersion.
 
 ## Technologies Used
 - HTML, CSS, JavaScript.
+
+Output:
+![Screenshot (2)](https://github.com/user-attachments/assets/d60b2e20-504a-4839-94d1-9af87661adf2)
+![Screenshot (4)](https://github.com/user-attachments/assets/6bb5029e-c5d7-4d3c-a913-f7197998b4a6)
