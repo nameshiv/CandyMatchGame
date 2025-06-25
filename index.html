@@ -12,7 +12,18 @@
     <button id="playPauseBtn">
         <img id="playPauseIcon" src="soundon.png" alt="Play">
     </button>
+//To prevent long-press
+    <script>
+  // Prevent long-press menu on entire document
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
 
+  // Optional: Disable text/image selection
+  document.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+</script>
 
     <script>
         // var audio = new Audio('bgm2.mp3');
